@@ -8,6 +8,10 @@ public class WordsearchapiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WordsearchapiApplication.class, args);
+
+
+
+
 	}
 
 }

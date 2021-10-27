@@ -1,0 +1,22 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.grid-area {
+  margin-top: 40px;
+}
+.grid-area table {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  user-select: none;
+}
+.grid-area table td {
+  width: 10px;
+  height: 10px;
+}
+.grid-area table td.selected {
+  color: #ec4343;
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */

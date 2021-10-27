@@ -15,18 +15,22 @@ public class WordSearchController {
     WordGridService wordGridService;
 
     @GetMapping("wordgrid")
+    @CrossOrigin(origins = "http://localhost:1234/")
     public String creatWordGrid(@RequestParam int gridSize,@RequestParam String wordList) {
 
-        List<String > words= Arrays.asList(wordList.split("-"));
+        List<String > words= Arrays.asList(wordList.split(","));
         char[][] grid = wordGridService.generateGrid(gridSize, words);
         String gridToString = "";
 
         for (int i = 0; i < gridSize; i++) {
             for (int j = 0; j < gridSize; j++) {
                 gridToString += grid[i][j] + " ";
+
+
             }
-            gridToString += "\r\n";
+            gridToString += "\r\n";//\r\n"
         }
+       System.out.println(gridToString);
         return gridToString;
     }
 
